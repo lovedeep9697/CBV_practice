@@ -18,7 +18,8 @@ from django.urls import path
 from basic_app import views
 from django.conf.urls import url
 urlpatterns = [
-	url(r'^$',views.index,name = 'index'),
+	# url(r'^$',views.index,name = 'index'),
     path('admin/', admin.site.urls),
-    url(r'^admin/',admin.site.urls),  
+    url(r'^admin/',admin.site.urls),
+    url(r'^$',views.IndexView.as_view())  
 ]
